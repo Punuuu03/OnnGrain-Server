@@ -47,7 +47,7 @@ export const login = async (req, res) => {
         mobile_number: user.mobile_number,
       },
       process.env.JWT_SECRET,
-      { expiresIn: '1h' }
+      { expiresIn: '30d' }
     );
 
     res.status(200).json({ message: 'Login successful', token });
